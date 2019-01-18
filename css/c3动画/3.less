@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#box{
+    width:300px;
+    height: 300px;
+    margin: 20px auto;
+    background: lightgreen;
+    border: 1px solid red;
+    img{
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        // transform-origin: 100% 0%;//改变图片的中心点
+    }
+}
+    &:hover{
+        img{
+            // transform: rotate(720deg);//根据中心点倾斜
+            transform: scale(2) skew(720deg,720deg);//根据中心点拉伸
+            transform: scale(2) //放大两倍
+    }
+}

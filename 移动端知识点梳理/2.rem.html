@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet/less" href="2.less">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 100px;/*1rem = 100px*/
+        }
+        #box1{
+            width: 1rem;
+            height: 1rem;
+            background: red;
+            margin: .2rem;
+        }
+        #box2{
+            width: 2rem;
+            height: 2rem;
+            background: yellow;
+            margin: .2rem;
+        }
+        #box3{
+            width: 3rem;
+            height: 3rem;
+            background: green;
+            margin: .2rem;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <input type="text">
+    
+    <input type="text" list = 'ddd' id='inp2'>
+    <datalist id='ddd'>
+        <option value="11">1</option>
+        <option value="22">2</option>
+        <option value="33">3</option>
+    </datalist>
+
+</body>
+<script>
+    var inp = document.getElementsByTagName('input')[0]
+    inp.onkeypress=function(e){
+        console.log(e.key )
+    }
+    inp.onkeydown=function(e){
+        console.log(e.key )
+    }
+</script>
+</html>

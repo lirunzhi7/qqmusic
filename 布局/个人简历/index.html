@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/个人简历.css">
+    <script>
+        let w = document.documentElement.clientWidth || document.body.clientWidth
+        document.documentElement.style.fontSize = w / 640 * 100 + 'px'
+    </script>
+</head>
+
+<body>
+    <!--loading-->
+    <section class="loadingbox">
+        <header>
+            <h2>珠峰培训</h2>
+            <h3>H5场景的交互简历</h3>
+        </header>
+        <div class="progressbox">
+            <div class="progressbar"></div>
+        </div>
+    </section>
+
+    <!--接电话-->
+    <section class="phonebox">
+        <header>
+            <h2>XX来电</h2>
+            <h3>wwww.zhufengpeixun.com</h3>
+            <h6 class="timebox hidden">00:00</h6>
+        </header>
+        <div class="listenbox">
+            <div class="listenbtn"></div>
+        </div>
+        <div class="nolistbox">
+            <div class="nolistbtn"></div>
+        </div>
+    </section>
+
+    <!-- 聊天 -->
+    <section class="msgbox">
+        <ul>
+            <li>
+                <div>
+                    <img src="./imges/message-head1.png" alt="">
+                    让我们档期茶馆将小船儿推开波浪 让我们档期茶馆将小船儿推开波浪
+                </div>
+            </li>
+            <li class="right">
+                <div>
+                    <img src="./imges/message-head2.png" alt="">
+                    显贵打过去还是学不会
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./imges/message-head1.png" alt="">
+                    让我们档期茶馆将小船儿推开波浪 让我们档期茶馆将小船儿推开波浪
+                </div>
+            </li>
+            <li>
+                    <div>
+                        <img src="./imges/message-head1.png" alt="">
+                        让我们档期茶馆将小船儿推开波浪 让我们档期茶馆将小船儿推开波浪
+                    </div>
+                </li>
+            <li class="right">
+                <div>
+                    <img src="./imges/message-head2.png" alt="">
+                    显贵打过去还是学不会
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./imges/message-head1.png" alt="">
+                    让我们档期茶馆将小船儿推开波浪 让我们档期茶馆将小船儿推开波浪
+                </div>
+            </li>
+            <li class="right">
+                <div>
+                    <img src="./imges/message-head2.png" alt="">
+                    显贵打过去还是学不会
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="./imges/message-head1.png" alt="">
+                    让我们档期茶馆将小船儿推开波浪 让我们档期茶馆将小船儿推开波浪
+                </div>
+            </li>
+            <li class="right">
+                <div>
+                    <img src="./imges/message-head2.png" alt="">
+                    显贵打过去还是学不会
+                </div>
+            </li>
+        </ul>
+        <div class="keyboard">
+            <div class="textbox"></div>
+            <div class="btn hidden"></div>
+        </div>
+    </section>
+
+    <!-- 音乐 -->
+    <audio src="./audio/bell.mp3" preload="none" id="bell" loop></audio>
+    <audio src="./audio/say.mp3"  preload="none" id="say"></audio>
+    <audio src="./audio/music.mp3" preload="none" id="music"></audio>
+</body>
+<script src="./zepto.min.js"></script>
+<script src="./index.js"></script>
+
+</html>

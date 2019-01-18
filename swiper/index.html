@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./swiper-3.4.2.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .swiper-container {
+        width: 600px;
+        height: 300px;
+        background: lightcoral;
+        text-align:center;
+        line-height: 300px;
+        font-size: 60px;
+        margin-top: 100px ;
+    }
+    p{
+        width: 100px;
+        height: 100px;
+        border: 1px dashed red;
+        /* 以下不折行溢出部分隐藏 */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    ul{
+        width: 300px;
+        height: 200px;
+        display: flex;
+        border: 1px dotted black;
+        margin-left: 100px;
+    }
+    li{
+        flex:1;
+        border: 1px dotted black;
+    }
+</style>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <p>nimd大肯尼迪离开你；看来；S</p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script src="../布局/个人简历/zepto.min.js"></script>
+<script src="./swiper-3.4.2.jquery.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        loop: true,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        scrollbar: '.swiper-scrollbar',
+    })        
+</script>
+</html>

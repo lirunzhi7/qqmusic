@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  width: 200px;
+  height: 200px;
+  border: 2px solid lightseagreen;
+  margin: 30px;
+}
+ul :nth-child(1) {
+  border-radius: 50%;
+}
+ul :nth-child(2) {
+  border-radius: 20px 40px 60px 80px;
+}
+ul :nth-child(3) {
+  border-radius: 100px 100px 0 0;
+  height: 100px;
+}
+ul :nth-child(4) {
+  border-radius: 50px 100px;
+}
+ul :nth-child(5) {
+  border-radius: 200px 0 0 0;
+}
+ul :nth-child(6) {
+  border-radius: 100px 0 0 0;
+  height: 100px;
+  width: 100px;
+}

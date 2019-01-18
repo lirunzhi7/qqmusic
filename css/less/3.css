@@ -1,0 +1,7 @@
+.box {
+  width: 600px;
+  height: 600px;
+  line-height: 200px;
+  border: 1px solid red;
+  background: url('img/1.jpg') no-repeat;
+}

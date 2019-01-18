@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul{
+    li{
+        height: 200px;
+        width: 200px;
+        border: 2px solid rebeccapurple;
+    }
+    & :nth-child(1){
+        //渐性渐变
+        background: -webkit-linear-gradient(center,yellow,red,blue);
+        border-radius: 50%;
+    }
+    & :nth-child(2){
+        //径向线变
+        background: -webkit-radial-gradient(circle, red,yellow,blue);
+    }
+    & :nth-child(3){
+        background:url(../less/img/1.jpg) no-repeat 30px 20px;
+        // background-size: 100% 100%;
+    }
+    & :nth-child(4){
+        //文本阴影和文字边框
+        font-weight: bold;
+        text-shadow: 10px 10px 2px #666;
+        -webkit-text-stroke: 2px blue;
+        letter-spacing: 5px;
+        color: #fff;
+        font-size: 50px
+    }
+}
+//固定背景图
+// body{
+//     width: 100%;
+//     height: 100%;
+//     overflow: scroll;
+//     background: url(../less/img/2.jpg) no-repeat;
+//     background-size: 100% 100%;
+//     background-attachment: fixed;
+// }

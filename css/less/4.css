@@ -1,0 +1,30 @@
+.pub {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+.pub div {
+  background: limegreen;
+}
+.parent {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+.parent div {
+  background: limegreen;
+}
+.parent div {
+  background: yellow;
+}
+.parent2 {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+.parent2 div {
+  background: limegreen;
+}
+.parent2 div {
+  background: red;
+}

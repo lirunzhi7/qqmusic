@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link rel="stylesheet" href="../css/魔方.css">
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="../img/cube-img1.png" alt=""></li>
+            <li><img src="../img/cube-img2.png" alt=""></li>
+            <li><img src="../img/cube-img3.png" alt=""></li>
+            <li><img src="../img/cube-img4.png" alt=""></li>
+            <li><img src="../img/cube-img5.png" alt=""></li>
+            <li><img src="../img/cube-img6.png" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //上下拖动 是rotateX/左右拖动 是rotateY
+    let uls=document.getElementsByTagName('ul')[0]
+    let startx = 0;
+    let starty = 0;
+    document.ontouchstart=function(e){
+         this.sx=e.changedTouches[0].pageX
+         this.sy=e.changedTouches[0].pageY
+    }
+    document.ontouchmove=function(e){
+        this.changex =e.changedTouches[0].pageX - this.sx 
+        this.changey =e.changedTouches[0].pageY - this.sy
+        uls.style.transform=`rotateX(${starty-this.changey}deg) rotateY(${startx - this.changex}deg)`
+    }
+    document.ontouchend=function(e){
+        startx =startx + this.changey 
+        starty = starty + this.changex 
+    }
+</script>
+</html>

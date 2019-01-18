@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+// //第一个理解
+// ul{
+//     overflow: hidden;
+//     // width: 500px;
+//     // height: 500px;
+//     li{
+//         width:  100px;
+//         height: 100px;
+//         background: lightseagreen;
+//         float: left;
+//         margin: 20px;
+//     };
+//     //&符号的区别以下：
+//     &:nth-child(1){
+//         background:yellow;
+//         & :nth-child(1){
+//             background: red;
+//         }
+//     }
+//     & :nth-child(2n){
+//         background: black;
+//     }
+// }
+
+
+
+//第二个理解(odd基数：even偶数)//三行变色
+// ul{
+//     li{
+//         height: 50px;
+//     }
+//     li:nth-child(3n){
+//         background: limegreen;
+//     }
+//     li:nth-child(3n+1){
+//         background: red;
+//     }
+//     li:nth-child(3n+2){
+//         background: lightcoral;
+//     }
+// }
+
+
+//第三个理解(加上div标签)
+ul{
+    li{
+        height: 50px;
+        background: gold;
+    }
+    div{
+        height: 100px;
+        background: green;
+    }
+    //第二个儿子
+    & :nth-child(2){
+        width: 200px;
+        background: red;
+    }
+    //同一个元素下的第二个相同元素的儿子
+    & :nth-of-type(2){
+        width: 100px;
+        
+    }
+}
+
+//第四个理解(属性选择器）
+//li标签中有ee这个属性
+// ul{
+//     & [ee='qq']{
+//         background: lime;
+//     }
+// }
+
+
+//第五个伪类选择器（a标签（锚点））// 和伪元素
+ul{
+    & :target{
+        background: black;
+    }
+    //以下为伪元素
+    & :nth-child(1){
+        &::before{
+           content: 'hello'; 
+        //    position: absolute;
+        }
+        &::after{
+            content: 'world'; 
+        }
+    }
+}
+
+
+

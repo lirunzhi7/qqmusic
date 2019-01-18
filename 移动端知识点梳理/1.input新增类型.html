@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    年龄：
+    <input type="number" id='num' step="1" max="65" min="18" value="25" disabled>
+
+    <input type="range"  id='rangstep' step = "1" max="65" min="18" value="25">
+
+    <input type="color" id="icolor">
+
+    <input type="date">
+
+    <input type="email" id="mail" placeholder="请输入密码" autofocus=''>
+    <span id="spanmail"></span>
+
+    地区：
+    <input type="text" list="oo" >
+    <datalist name="" id="oo">/*还可以做下拉框的是select不过不能在input中的写内容*/
+        <option value="">==请选择==</option>
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="深圳">深圳</option>
+        <option value="广州">广州</option>
+    </datalist>
+    <style>
+        #mail{
+            border: 1px solid #666;
+            outline: none; /*当文本获取焦点后去除文本框默认的边框颜色*/
+        }
+        #mail:valid{
+            /*通过验证：不输入或者格式正确*/
+            border-color: green;
+        }
+        #mail:invalid{
+            /*验证不通过*/
+            border-color: red;
+        }
+        #mail:valid+span::after{
+            content: '邮箱符合格式'
+        }
+        #mail:invalid+span::after{
+            content: '邮箱不符合格式'
+        }
+    </style>
+</body>
+<script>
+    rangstep.oninput=function(){
+        let val = this.value
+        num.value = val
+    }
+    icolor.onchange=function(){
+        console.log(this.value)
+    }
+    mail.onkeydown = mail.onkeyup = function(){
+        if(this.checkValidity()){
+            spanmail.innerHTML='邮箱符合格式'
+        }else{
+            spanmail.innerHTML='邮箱不符合格式'
+        }
+    }
+</script>
+</html>
